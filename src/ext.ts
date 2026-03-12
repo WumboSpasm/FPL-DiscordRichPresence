@@ -47,6 +47,7 @@ export async function deactivate() {
   if (client) {
     flashpoint.log.debug('Shutting down Discord RPC Client');
     try {
+      client.clearActivity();
       await client.destroy();
     } catch (err) {
       flashpoint.log.debug(`Error shutting down Discord RPC Client:\n${err}`);
@@ -84,7 +85,7 @@ function createActivity(game?: flashpoint.Game): DiscordRPC.Presence {
       details: `Browsing The Archive`,
       startTimestamp: new Date(),
       largeImageKey: 'flashpoint',
-      largeImageText: 'BlueMaxima\'s Flashpoint',
+      largeImageText: 'Flashpoint Archive',
       instance: false
     };
   }
