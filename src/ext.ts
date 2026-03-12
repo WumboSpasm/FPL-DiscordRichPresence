@@ -85,7 +85,7 @@ function createActivity(game?: flashpoint.Game): DiscordRPC.Presence {
       details: `Browsing The Archive`,
       startTimestamp: new Date(),
       largeImageKey: 'flashpoint',
-      largeImageText: 'BlueMaxima\'s Flashpoint',
+      largeImageText: 'Flashpoint Archive',
       instance: false
     };
   }
