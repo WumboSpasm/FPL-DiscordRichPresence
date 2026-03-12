@@ -47,6 +47,7 @@ export async function deactivate() {
   if (client) {
     flashpoint.log.debug('Shutting down Discord RPC Client');
     try {
+      client.clearActivity();
       await client.destroy();
     } catch (err) {
       flashpoint.log.debug(`Error shutting down Discord RPC Client:\n${err}`);
